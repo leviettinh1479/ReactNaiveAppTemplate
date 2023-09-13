@@ -3,6 +3,10 @@
 
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": [
+      "react",
+      "react-native"
+    ]
   }
 }

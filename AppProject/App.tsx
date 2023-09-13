@@ -16,13 +16,16 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import CustomIcon from './src/components/CustomIcon';
+
 
 function App(): JSX.Element {
 
 
   return (
     <SafeAreaView>
-      <Text>Hello</Text>
+      <CustomIcon name="search" size={25}/>
+      <CustomIcon name="ticket" size={25}/>
     </SafeAreaView>
   );
 }
