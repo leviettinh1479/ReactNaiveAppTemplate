@@ -1,23 +1,24 @@
-import { Text, StyleSheet, View } from 'react-native'
-import React, { Component } from 'react'
-import { COLORS } from '../theme/theme'
+import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
+import React, {Component} from 'react';
+import {COLORS} from '../theme/theme';
 
-
-export default class HomeScreen extends Component {
-  render() {
-    return (
-      <View>
-        <Text>HomeScreen</Text>
-      </View>
-    )
-  }
-}
+const HomeScreen = ({navigation}: any) => {
+  return (
+    <View>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.push('MovieDetails');
+        }}>
+        <Text>Tinh</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: COLORS.Black,
+    backgroundColor: COLORS.Black
   },
-})
+});
+export default HomeScreen;
