@@ -3,7 +3,7 @@ import HomeScreen from '../screens/HomeScreen';
 import SearchScreen from '../screens/SearchScreen';
 import TicketScreen from '../screens/TicketScreen';
 import UserAccountScreen from '../screens/UserAccountScreen';
-import {COLORS, FONT_SIZE, FONT_FAMILY, SPACING} from '../theme/theme';
+import {COLORS, FONT_SIZE, SPACING} from '../theme/theme';
 import CustomIcon from '../components/CustomIcon';
 import {View, StyleSheet} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -29,11 +29,15 @@ const TabNavigator = () => {
           tabBarShowLabel: false,
           tabBarIcon: ({focused, color, size}) => {
             return (
-              <View style={[styles.activeTabBackground,focused ? {backgroundColor: COLORS.Orange} : {},]}>
+              <View
+                style={[
+                  styles.activeTabBackground,
+                  focused ? {backgroundColor: COLORS.Orange} : {},
+                ]}>
                 <CustomIcon
+                  name="video"
                   color={COLORS.White}
                   size={FONT_SIZE.size_30}
-                  name="video"
                 />
               </View>
             );
@@ -47,11 +51,15 @@ const TabNavigator = () => {
           tabBarShowLabel: false,
           tabBarIcon: ({focused, color, size}) => {
             return (
-              <View style={[styles.activeTabBackground,focused ? {backgroundColor: COLORS.Orange} : {},]}>
+              <View
+                style={[
+                  styles.activeTabBackground,
+                  focused ? {backgroundColor: COLORS.Orange} : {},
+                ]}>
                 <CustomIcon
+                  name="search"
                   color={COLORS.White}
                   size={FONT_SIZE.size_30}
-                  name="search"
                 />
               </View>
             );
@@ -65,11 +73,15 @@ const TabNavigator = () => {
           tabBarShowLabel: false,
           tabBarIcon: ({focused, color, size}) => {
             return (
-              <View style={[styles.activeTabBackground,focused ? {backgroundColor: COLORS.Orange} : {},]}>
+              <View
+                style={[
+                  styles.activeTabBackground,
+                  focused ? {backgroundColor: COLORS.Orange} : {},
+                ]}>
                 <CustomIcon
+                  name="ticket"
                   color={COLORS.White}
                   size={FONT_SIZE.size_30}
-                  name="ticket"
                 />
               </View>
             );
@@ -83,11 +95,15 @@ const TabNavigator = () => {
           tabBarShowLabel: false,
           tabBarIcon: ({focused, color, size}) => {
             return (
-              <View style={[styles.activeTabBackground,focused ? {backgroundColor: COLORS.Orange} : {},]}>
+              <View
+                style={[
+                  styles.activeTabBackground,
+                  focused ? {backgroundColor: COLORS.Orange} : {},
+                ]}>
                 <CustomIcon
+                  name="user"
                   color={COLORS.White}
                   size={FONT_SIZE.size_30}
-                  name="user"
                 />
               </View>
             );
@@ -97,6 +113,7 @@ const TabNavigator = () => {
     </Tab.Navigator>
   );
 };
+
 const styles = StyleSheet.create({
   activeTabBackground: {
     backgroundColor: COLORS.Black,
